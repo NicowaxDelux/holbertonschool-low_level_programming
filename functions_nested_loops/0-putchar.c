@@ -1,5 +1,8 @@
 #include "main.h"
 #include <stdio.h>
+#include <unistd.h>
+
+
 /* more headers goes there */
 /**
  * main - Prints a _putchar, followed by a new line.
@@ -9,7 +12,7 @@
 /* betty style doc for function main goes there */
 int main(void)
 {
-	printf("_putchar\n");
+	write(STDOUT_FILENO, "_putchar\n", 9);
 
 	return (0);
 }
