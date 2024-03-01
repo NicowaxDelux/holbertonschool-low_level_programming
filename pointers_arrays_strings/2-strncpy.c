@@ -6,7 +6,7 @@
   *@src: string value
   *@n: new bytes
   *
-  *Return: return string with strncpy
+  *Return: return string
   */
 char *_strncpy(char *dest, char *src, int n)
 {
