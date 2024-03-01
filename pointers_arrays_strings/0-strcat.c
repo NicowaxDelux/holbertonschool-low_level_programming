@@ -5,7 +5,7 @@
   *@dest: string dest
   *@src: string origin
   *
-  *Returns: return string dest
+  *Return: return string dest
   */
 char *_strcat(char *dest, char *src)
 {
@@ -19,5 +19,5 @@ char *_strcat(char *dest, char *src)
 
 		dest[lenght++] = src[count];
 
-	return (dest);	
+	return (dest);
 }
