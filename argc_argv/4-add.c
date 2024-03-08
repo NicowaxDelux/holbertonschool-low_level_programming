@@ -14,18 +14,23 @@
   */
 int main(int argc, char *argv[])
 {
-	int i = 0, sum = 0;
+	int i = 0, j = 0, sum = 0;
+	int array_length = 0;
 
 	for (i = 1; i < argc; i++)
 	{
-		if ((argv[i][0] != '0') && (atoi(argv[i]) == 0))
+		array_length = sizeof(argv[i]) / sizeof(argv[0]);
+		for (j = 0; j <= array_length; j++)
 		{
-			printf("Error\n");
-			return (1);
+			if ((argv[i][j] != '0') && (int)argv[i][j] > 57)
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
 		sum += atoi(argv[i]);
+
 	}
 	printf("%d\n", sum);
 	return (0);
-
 }
