@@ -1,95 +1,35 @@
 #include "dog.h"
-#include "stdlib.h"
+#include <stdlib.h>
 
 /**
-  * _strlen - returns length of a string
-  *
-  *@str: string
-  *
-  *Return: returns length of string
-  *
-  */
-
-int _strlen(char *str)
-{
-	int length = 0;
-
-	while (str)
-	{
-		length++;
-	}
-	return (length);
-}
-
-/**
-  * _strcopy - copy a string
-  *
-  *@dest: string copy
-  *@src: string to copy
-  *
-  *Return: Return copied string
-  */
-char *_strcopy(char *dest, char *src)
-{
-	int i = 0;
-
-	for (; src[i]; i++)
-		dest[i] = src[i];
-
-	dest[i] = '\0';
-	return (dest);
-}
-
-/**
-*new_dog - creates a new dog
-*@name: name of new dog
-*@age: age of new dog
-*@owner: owner of new dog
-*Return: returns NULL in case of failure
-*/
-
+ * new_dog - entry point
+ * @name: string from main, name of pet
+ * @age: number from main, age of pet
+ * @owner: string from main, owner of pet
+ * Return: p
+ */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-
-	dog_t *doggo;
-
-
-	if (name == NULL || age < 0 || owner == NULL)
-
+	dog_t *p;
+	/* reserving memory to struct*/
+	p = malloc(sizeof(dog_t));
+	if (p == NULL)
 		return (NULL);
-
-
-	doggo = malloc(sizeof(dog_t));
-
-	if (doggo == NULL)
-
-		return (NULL);
-
-
-	doggo->name = malloc(sizeof(char) * (_strlen(name) + 1));
-
-	if (doggo->name == NULL)
+	/* Cpunting name pointer*/
+	if (name == NULL)
 	{
-		free(doggo);
+		free(p);
+		free(owner);
 		return (NULL);
-
 	}
-
-	doggo->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
-
-	if (doggo->owner == NULL)
+	if (owner == NULL)
 	{
-
-		free(doggo->name);
-		free(doggo);
-
+		free(p);
+		free(name);
 		return (NULL);
-
 	}
-
-
-	doggo->name = _strcopy(doggo->name, name);
-	doggo->age = age;
-	doggo->owner = _strcopy(doggo->owner, owner);
-	return (doggo);
+	p->name = name;
+	p->age = age;
+	p->owner = owner;
+	return (p);
 }
