@@ -1,5 +1,20 @@
-#ifndef VARIADICFUNTIONS_h
-#define VARIADICFUNTIONS_h
+#ifndef _VARIADIC_FUNCTIONS_h
+#define _VARIADIC_FUNCTIONS_h
+
+#include <stdarg.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * struct print - print
+ * @type: The operator
+ * @f: The function associated
+ */
+typedef struct print
+{
+	char *type;
+	void (*f)(va_list ap);
+} print_type;
 
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
