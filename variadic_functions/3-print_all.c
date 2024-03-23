@@ -5,7 +5,7 @@
 
 /**
  * print_char - Prints a char
- * @ap: Argument pointer
+ * @arg: Argument pointer
  */
 void print_char(va_list arg)
 {
@@ -14,7 +14,7 @@ void print_char(va_list arg)
 
 /**
  * print_integer - Prints an integer
- * @ap: Argument pointer
+ * @arg: Argument pointer
  */
 void print_integer(va_list arg)
 {
@@ -23,7 +23,7 @@ void print_integer(va_list arg)
 
 /**
  * print_float - Prints a float
- * @ap: Argument pointer
+ * @arg: Argument pointer
  */
 void print_float(va_list arg)
 {
@@ -32,7 +32,7 @@ void print_float(va_list arg)
 
 /**
  * print_string - Prints a string
- * @ap: Argument pointer
+ * @arg: Argument pointer
  */
 void print_string(va_list arg)
 {
