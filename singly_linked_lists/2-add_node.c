@@ -6,14 +6,14 @@
 /**
   *_strlen -  returns the length of a string.
   *
-  *@s: value pointer
+  *@str: value pointer
   *
   *Return: lenght of char str
   */
 int _strlen(const char *str)
 {
 	size_t len = 0;
-	
+
 	while (*str++)
 
 		len++;
