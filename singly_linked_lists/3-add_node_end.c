@@ -22,7 +22,7 @@ int _strlen(const char *str)
 }
 
 /**
-  * add_node - function that adds a new node 
+  * add_node_end - function that adds a new node
   * at the end of a list_t list.
   *
   * @head: pointer to pointer for modify the head list
