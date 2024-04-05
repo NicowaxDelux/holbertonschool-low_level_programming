@@ -2,7 +2,7 @@
 
 /**
  * clear_bit - set the opposite of the mask
- * @num: number to set
+ * @n: number to set
  * @index: position
  * Return: 1 on success, -1 on fail
  */
